@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="site.tsoft.tinylight">
+
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <application
+        android:icon="@drawable/flashlight"
+        android:label="TinyLight">
+        <service
+            android:name="site.tsoft.tinylight.TinyLightService"
+            android:exported="false"></service>
+
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
